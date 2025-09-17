@@ -3,10 +3,12 @@
 I don't usually use GitHub for any of my personal projects and since I've been handing out resumes recently I thought it would be prudent to make a repo to show them off.
 
 ## Table of Contents
+- [FPGA Synth](#fpga-synth-in-vhdl)
+
 
 ## FPGA Synth in VHDL
 
-This was a final project for a class. One of hte suggested projects was a "waveform generator", which made me want to create a full-fledged sequencer. I never finished the sequencing aspect or made a demo song to play off it, but the resulting project is a functional (albeit not very user-friendly) monophonic synthesizer on an FPGA. For all MIDI frequencies, it can output:
+This was a final project for a class in spring of 2025. One of hte suggested projects was a "waveform generator", which made me want to create a full-fledged sequencer. I never finished the sequencing aspect or made a demo song to play off it, but the resulting project is a functional (albeit not very user-friendly) monophonic synthesizer on an FPGA. For all MIDI frequencies, it can output:
 - Square waves (with pulse width modulation)
 - Sawtooth waves (with incorrectly done pulse-width modulation)
 - Triangle waves
@@ -22,3 +24,66 @@ A high-level diagram of the design:
 
 And a simulation in Vivado showing an output sine wave (and corresponding PWM output to the DAC a few rows above it):
 ![](./VHDL_Synth/sine_wave_out.png)
+
+## Python Cellular Automata Terrain Generation Scripting
+
+This project was done around my freshman year as what was supposed to be a part of an AI club project which I got immensely side-tracked on. The original project was to create some simple agents that would live and evolve in a 2D tile world. The process of trying to come up with ways to do terrain generation became extremely engrossing and with my less-than-ideal organizational abilities at the time, the project went off the rails and I ended up making a scripting language to go with it. Unfortunately, I was using no version control at the time and was in the middle of completely refactoring the code when I stopped working on it, so the code is both bad and broken. Still, I have some of the results left over which are pretty cool.
+
+Here's an example input script file:
+<details>
+  <summary>Script</summary>
+  
+  ```
+  size 200 100
+  noisemap 10
+  do steps 20 rad 7 offset d rand
+  save
+  clear
+  noisemap 1.5
+  do steps 5 rad 4 offset d c b 1 2 3 s a
+  compo add
+  save
+  clear
+  sinenoisemap add 10 amp rand period rand
+  sinenoisemap subtract 20 amp rand period rand
+  sinenoisemap add 10 amp rand period rand
+  sinenoisemap subtract 20 amp rand period rand
+  compo posintersect
+  save
+  clear
+  sinenoisemap add 40 amp rand period rand
+  sinenoisemap subtract 10 amp rand period rand
+  sinenoisemap add 8 amp rand period rand
+  sinenoisemap subtract 12 amp rand period rand
+  compo posintersect
+  save
+  clear
+  noisemap 6
+  do steps 10 rad 4000 offset d c b 3 4 s a
+  do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+  save e
+  clear
+  noisemap 6
+  do steps 5 rad 4000 offset d c b 3 4 s a
+  do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+  compo add e
+  save e
+  clear
+  noisemap 6
+  do steps 2 rad 4000 offset d c b 3 4 s a
+  do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+  compo add e
+  compo add
+  ```
+</details>
+
+And the example output file showing the terrain:
+![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/final0000-asymmetry-test.png)
+
+The program also generated process gifs which showed each rule in action as the image was being created.
+You can see the process for the above image below. (WARNING: QUICKLY FLASHING COLORS)
+<details>
+  <summary>Gif</summary>
+
+  ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/anim0000.gif)
+</details>
