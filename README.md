@@ -4,7 +4,7 @@ I don't usually use GitHub for any of my personal projects and since I've been h
 
 ## Table of Contents
 - [FPGA Synth](#fpga-synth-in-vhdl)
-
+- [Cellular Automata Terrain Gen](#Python-Cellular-Automata-Terrain-Generation-Scripting)
 
 ## FPGA Synth in VHDL
 
@@ -25,9 +25,9 @@ A high-level diagram of the design:
 And a simulation in Vivado showing an output sine wave (and corresponding PWM output to the DAC a few rows above it):
 ![](./VHDL_Synth/sine_wave_out.png)
 
-## Python Cellular Automata Terrain Generation Scripting
+## Python Cellular Automata Terrain Generation
 
-This project was done around my freshman year as what was supposed to be a part of an AI club project which I got immensely side-tracked on. The original project was to create some simple agents that would live and evolve in a 2D tile world. The process of trying to come up with ways to do terrain generation became extremely engrossing and with my less-than-ideal organizational abilities at the time, the project went off the rails and I ended up making a scripting language to go with it. Unfortunately, I was using no version control at the time and was in the middle of completely refactoring the code when I stopped working on it, so the code is both bad and broken. Still, I have some of the results left over which are pretty cool.
+This project was done around my freshman year as what was supposed to be a part of an AI club project which I got immensely side-tracked on. The original project was to create some simple agents that would live and evolve in a 2D tile world. The process of trying to come up with ways to do terrain generation became extremely engrossing and with my less-than-ideal organizational abilities at the time, the project went off the rails and I ended up making a scripting language to go with it. Unfortunately, I was using no version control at the time and was in the middle of completely refactoring the code when I stopped working on it, so the code is both bad (poorly written and unoptimized) and broken. Still, I always enjoy looking back at this project because the results left over are pretty cool.
 
 Here's an example input script file:
 <details>
@@ -78,6 +78,7 @@ Here's an example input script file:
 </details>
 
 And the example output file showing the terrain:
+
 ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/final0000-asymmetry-test.png)
 
 The program also generated process gifs which showed each rule in action as the image was being created.
@@ -87,3 +88,5 @@ You can see the process for the above image below. (WARNING: QUICKLY FLASHING CO
 
   ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/anim0000.gif)
 </details>
+
+##
