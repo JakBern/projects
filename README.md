@@ -17,7 +17,7 @@ This was a final project for a class in spring of 2025. One of hte suggested pro
 
 Here's a (very low quality) video demonstrating it:
 
-![synth demo](https://github.com/user-attachments/assets/80758e3f-b586-4172-b190-afab6e921376)
+<video src="https://github.com/user-attachments/assets/80758e3f-b586-4172-b190-afab6e921376"></video>
 
 A high-level diagram of the design:
 ![](./VHDL_Synth/diagram.png)
@@ -89,6 +89,15 @@ You can see the process for the above image below. (WARNING: QUICKLY FLASHING CO
   ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/anim0000.gif)
 </details>
 
-More scripts and example outputs can be found in the folder.
+More scripts and example outputs can be found in the `Python_Cellular_Automata_Rockgen` folder.
 
-##
+## Fixed-Point Library in C++
+
+This actually isn't all that special, it's a pretty standard implementation of fixed-point numbers (some of it copied from other libraries and changed slightly). This is mainly an artifact of an ongoing (and repeatedly restarting) 2D game I've been making with SDL, but everything else about the game has been scrapped or is in too half-finished of a state to show.
+
+It also isn't super optimized because operator overloading in C++ isn't free; at some point I'll have to bite the bullet and implement expression templates (basically creating another AST using templates so that operator overloading can actually be optimized correctly). 
+
+A nice little demo I made with it to test the numerical stability of oscillators of different fixed point sizes can be seen in the video below. The fixed-point types are denoted "fixed \<total bits\> : \<bits in fraction\>" 
+
+<video src="https://github.com/user-attachments/assets/45ebda34-4057-4859-b8b6-1b0b36c46b8c"></video>
+
