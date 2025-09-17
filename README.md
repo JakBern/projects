@@ -16,3 +16,9 @@ This was a final project for a class. One of hte suggested projects was a "wavef
 Here's a (very low quality) video demonstrating it:
 
 ![synth demo](https://github.com/user-attachments/assets/80758e3f-b586-4172-b190-afab6e921376)
+
+A high-level diagram of the design:
+![](./VHDL_Synth/diagram.png)
+
+And a simulation in Vivado showing an output sine wave (and corresponding PWM output to the DAC a few rows above it):
+![](./VHDL_Synth/sine_wave_out.png)
