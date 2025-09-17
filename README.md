@@ -14,4 +14,5 @@ This was a final project for a class. One of hte suggested projects was a "wavef
 - Noise (which can change pitch, or can be more "metallic" and harsh sounding like the option on the NES noise channel)
 
 Here's a video demonstrating it:
-<video src="./VHDL_Synth/boardtest.mp4"/>
+https://github.com/user-attachments/assets/8f4f42c5-2172-4967-bd18-5940e994bb24
+
