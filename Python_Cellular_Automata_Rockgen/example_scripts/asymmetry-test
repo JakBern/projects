@@ -1,0 +1,40 @@
+size 200 100
+noisemap 10
+do steps 20 rad 7 offset d rand
+save
+clear
+noisemap 1.5
+do steps 5 rad 4 offset d c b 1 2 3 s a
+compo add
+save
+clear
+sinenoisemap add 10 amp rand period rand
+sinenoisemap subtract 20 amp rand period rand
+sinenoisemap add 10 amp rand period rand
+sinenoisemap subtract 20 amp rand period rand
+compo posintersect
+save
+clear
+sinenoisemap add 40 amp rand period rand
+sinenoisemap subtract 10 amp rand period rand
+sinenoisemap add 8 amp rand period rand
+sinenoisemap subtract 12 amp rand period rand
+compo posintersect
+save
+clear
+noisemap 6
+do steps 10 rad 4000 offset d c b 3 4 s a
+do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+save e
+clear
+noisemap 6
+do steps 5 rad 4000 offset d c b 3 4 s a
+do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+compo add e
+save e
+clear
+noisemap 6
+do steps 2 rad 4000 offset d c b 3 4 s a
+do steps 1 rad 1000000 offset d c b 8 s 2 3 4 5 6 7 8
+compo add e
+compo add

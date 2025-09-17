@@ -1,0 +1,18 @@
+size 284 117
+!VAR["a"] = 0
+sub /2 /5
+[
+if math.floor(VAR["a"])%2
+{
+fill
+}
+
+else
+{
+}
+
+!VAR["a"] += 1
+]
+smooth width 4 default
+smooth width 5 default-2
+smooth width 4 sine

@@ -1,0 +1,4 @@
+size 128
+noisemap 5
+#test comment
+do steps 20 rad 7000 offset d custrand_test
