@@ -5,6 +5,9 @@ I don't usually use GitHub for any of my personal projects and since I've been h
 ## Table of Contents
 - [FPGA Synth](#fpga-synth-in-vhdl)
 - [Cellular Automata Terrain Gen](#python-cellular-automata-terrain-generation)
+- [Fixed-Point Library](#fixed-point-library-in-c++)
+- [ASCII Drawing Program in JavaScript](#ascii-drawing-program-in-javascript)
+- [Machine Learning Experiments in Pytorch](#various-machine-learning-experiments-in-pytorch)
 
 ## FPGA Synth in VHDL
 
@@ -101,3 +104,31 @@ A nice little demo I made with it to test the numerical stability of oscillators
 
 <video src="https://github.com/user-attachments/assets/45ebda34-4057-4859-b8b6-1b0b36c46b8c"></video>
 
+## ASCII Drawing Program in JavaScript
+
+I never finished this one, but it's at a stage where I can reasonably show off a little of it. I was originally wanting to make a roguelike for browser, but then I thought about the possibility of creating your own maps with a tool, so I created a paint program that works with colored text. If I ever returned to working on this, I'd stop using 10,000 DOM nodes and switch to using the HTML5 canvas instead, since it runs pretty poorly. Some tools are broken or completely unimplemented.
+
+The documentation for the program is linked on my WIP website GitHub page [here](https://jakbern.github.io/website_stuff/). A direct link to the program is [here](https://jakbern.github.io/website_stuff/map_viewer.html). The line, fill, circle, rect, and curve tools work at the very least.
+
+## Various Machine Learning Experiments in Pytorch
+
+I didn't upload these because I feel embarrassed by how naive the models were and how I don't have much to show for them. I will describe the projects briefly:
+
+### 1. Finger Tracker
+
+I wanted to create a demo project for the AI club at KU which could be brought to a middle school, so I tried making a model that tracks only index fingers. I also wanted it to run in the browser, and since I use Firefox I had to use the web onnx runtime since it used WebGL and Firefox didn't have WebGPU support.
+
+The architecture was based on the ConvNeXt paper, but I had to remove layernorm and GeLU since neither operations were supported. There were a lot of hoops I was jumping through (converting the model to base64 and loading it in as a JS file so I could deploy the application without running a server) while trying to train on too little data and with an ill-defined objective.
+
+Still, I learned a lot.
+
+### 2. Instrument Cloner
+
+I'm interested in sound synthesis and wanted to try an create an artificial piano sound using an MLP that took as input:
+- the fundamental frequency of a note
+- various other parameters I tried out (length of audio, average volume, peak volume, sometimes none of these).
+and would output:
+- a series of coefficients for the frequencies and phases of 16 - 32 sine waves
+- coefficients for volume envelopes that would be applied to these sine waves (note: a normal ADSR envelope is just a piecewise function and not differentiable wrt where the envelope starts/ends. I instead used opening/closing sigmoids which could be parameterizd to act like an envelope)
+
+I tried training using reconstruction loss (on the raw audio output) and multi-scale spectral loss (used in the DDSP paper). I still haven't given up on the idea that this might work, but I think I have insufficient/too poorly labeled data and some aspects of the idea may need tweaking.
