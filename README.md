@@ -13,6 +13,6 @@ This was a final project for a class. One of hte suggested projects was a "wavef
 - Sine waves
 - Noise (which can change pitch, or can be more "metallic" and harsh sounding like the option on the NES noise channel)
 
-Here's a video demonstrating it:
-![](https://github.com/user-attachments/assets/8f4f42c5-2172-4967-bd18-5940e994bb24)
+Here's a (very low quality) video demonstrating it:
 
+![synth demo](https://github.com/user-attachments/assets/80758e3f-b586-4172-b190-afab6e921376)
