@@ -89,4 +89,6 @@ You can see the process for the above image below. (WARNING: QUICKLY FLASHING CO
   ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/anim0000.gif)
 </details>
 
+More scripts and example outputs can be found in the folder.
+
 ##
