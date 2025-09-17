@@ -4,7 +4,7 @@ I don't usually use GitHub for any of my personal projects and since I've been h
 
 ## Table of Contents
 - [FPGA Synth](#fpga-synth-in-vhdl)
-- [Cellular Automata Terrain Gen](#Python-Cellular-Automata-Terrain-Generation-Scripting)
+- [Cellular Automata Terrain Gen](#python-cellular-automata-terrain-generation)
 
 ## FPGA Synth in VHDL
 
