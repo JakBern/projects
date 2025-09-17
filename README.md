@@ -100,7 +100,7 @@ This actually isn't all that special, it's a pretty standard implementation of f
 
 It also isn't super optimized because operator overloading in C++ isn't free; at some point I'll have to bite the bullet and implement expression templates (basically creating another AST using templates so that operator overloading can actually be optimized correctly). 
 
-A nice little demo I made with it to test the numerical stability of oscillators of different fixed point sizes can be seen in the video below. The fixed-point types are denoted "fixed \<total bits\> : \<bits in fraction\>" 
+A nice little demo I made with it to test the numerical stability of oscillators of different fixed point sizes (vs floats and doubles) can be seen in the video below. The fixed-point types are denoted "fixed \<total bits\> : \<bits in fraction\>" 
 
 <video src="https://github.com/user-attachments/assets/45ebda34-4057-4859-b8b6-1b0b36c46b8c"></video>
 
