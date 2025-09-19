@@ -85,9 +85,9 @@ And the example output file showing the terrain:
 ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/final0000-asymmetry-test.png)
 
 The program also generated process gifs which showed each rule in action as the image was being created.
-You can see the process for the above image below. (WARNING: QUICKLY FLASHING COLORS)
+You can see the process for the above image below.
 <details>
-  <summary>Gif</summary>
+  <summary>Gif (WARNING: QUICKLY FLASHING COLORS)</summary>
 
   ![](./Python_Cellular_Automata_Rockgen/example_output/asymmetry-test/anim0000.gif)
 </details>
