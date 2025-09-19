@@ -106,6 +106,8 @@ A nice little demo I made with it to test the numerical stability of oscillators
 
 ## ASCII Drawing Program in JavaScript
 
+<img alt="ascii_map_editor" src="https://github.com/user-attachments/assets/5b7d035b-19c0-48aa-98f9-e9921be480dd" />
+
 I never finished this one, but it's at a stage where I can reasonably show off a little of it. I was originally wanting to make a roguelike for browser, but then I thought about the possibility of creating your own maps with a tool, so I created a paint program that works with colored text. If I ever returned to working on this, I'd stop using 10,000 DOM nodes and switch to using the HTML5 canvas instead, since it runs pretty poorly. Some tools are broken or completely unimplemented.
 
 The documentation for the program is linked on my WIP website GitHub page [here](https://jakbern.github.io/website_stuff/). A direct link to the program is [here](https://jakbern.github.io/website_stuff/map_viewer.html). The line, fill, circle, rect, and curve tools work at the very least.
