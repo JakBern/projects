@@ -11,7 +11,7 @@ I don't usually use GitHub for any of my personal projects and since I've been h
 
 ## FPGA Synth in VHDL
 
-This was a final project for a class in spring of 2025. One of hte suggested projects was a "waveform generator", which made me want to create a full-fledged sequencer. I never finished the sequencing aspect or made a demo song to play off it, but the resulting project is a functional (albeit not very user-friendly) monophonic synthesizer on an FPGA. For all MIDI frequencies, it can output:
+This was a final project for a class in spring of 2025. One of hte suggested projects was a "waveform generator", which made me want to create a full-fledged sequencer. I never finished the sequencing aspect or made a demo song to play off it, but the resulting project is a functional (albeit not very user-friendly) monophonic synthesizer on an FPGA. For all MIDI frequencies it can output:
 - Square waves (with pulse width modulation)
 - Sawtooth waves (with incorrectly done pulse-width modulation)
 - Triangle waves
